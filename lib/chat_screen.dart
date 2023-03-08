@@ -48,7 +48,7 @@ class _ChatScreenState extends State<ChatScreen> {
     _textEditingController.clear();
     final request = CompleteReq(prompt: message.chattext, model: kTranslateModelV3, max_tokens: 200);
     _subscription = chatGPT!
-        .builder("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")
+        .builder("enter api key")
         .onCompleteStream(request: request)
         .listen((response) {
       Vx.log(response!.choices[0].text);
